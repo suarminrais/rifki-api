@@ -17,6 +17,9 @@ $router->get('/', function () use ($router) {
 
 $router->group(['prefix' => 'api'], function () use ($router) {
    // Matches "/api/register
-    $router->post('register', 'AuthController@register');
+    $router->post('regis', 'AuthController@register');
     $router->post('login', 'AuthController@login');
+    
+    $router->get('jadwal', 'JadwalController@index');
+    $router->post('jadwal', 'JadwalController@store');
 });
